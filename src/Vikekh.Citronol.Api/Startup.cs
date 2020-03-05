@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Net.Http.Headers;
 
 namespace Vikekh.Citronol.Api
 {
@@ -34,6 +35,21 @@ namespace Vikekh.Citronol.Api
             app.UseRouting();
 
             app.UseAuthorization();
+
+            if (env.IsDevelopment())
+            {
+                app.UseCors(policy =>
+                    policy.WithOrigins("http://localhost:5002", "https://localhost:5003")
+                    .AllowAnyMethod()
+                    .WithHeaders(HeaderNames.ContentType));
+            }
+            else if (env.IsProduction())
+            {
+                app.UseCors(policy =>
+                    policy.WithOrigins("https://citronol-api.vikekh.com")
+                    .AllowAnyMethod()
+                    .WithHeaders(HeaderNames.ContentType));
+            }
 
             app.UseEndpoints(endpoints =>
             {

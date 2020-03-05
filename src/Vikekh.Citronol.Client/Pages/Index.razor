@@ -1,7 +1,22 @@
 ﻿@page "/"
+@inject HttpClient Http
 
-<h1>Hello, world!</h1>
+@if (count == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <div style="font-size: 80vh; line-height: 100vh; text-align: center;">@count</div>
+}
 
-Welcome to your new app.
+@code {
+    private int? count;
 
-<SurveyPrompt Title="How is Blazor working for you?" />
+    protected override async Task OnInitializedAsync()
+    {
+        Http.BaseAddress = new Uri("https://localhost:5001");
+        //Http.BaseAddress = new Uri("https://citronol-api.vikekh.com");
+        count = await Http.GetJsonAsync<int>("/count");
+    }
+}
