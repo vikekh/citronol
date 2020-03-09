@@ -36,20 +36,10 @@ namespace Vikekh.Citronol.Api
 
             app.UseAuthorization();
 
-            if (env.IsDevelopment())
-            {
-                app.UseCors(policy =>
-                    policy.WithOrigins("http://localhost:5002", "https://localhost:5003")
-                    .AllowAnyMethod()
-                    .WithHeaders(HeaderNames.ContentType));
-            }
-            else if (env.IsProduction())
-            {
-                app.UseCors(policy =>
-                    policy.WithOrigins("https://citronol-api.vikekh.com")
-                    .AllowAnyMethod()
-                    .WithHeaders(HeaderNames.ContentType));
-            }
+            app.UseCors(policy =>
+                policy.WithOrigins("http://localhost:5001")
+                .AllowAnyMethod()
+                .WithHeaders(HeaderNames.ContentType));
 
             app.UseEndpoints(endpoints =>
             {

@@ -3,19 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29806.167
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vikekh.Citronol.Client", "src\Vikekh.Citronol.Client\Vikekh.Citronol.Client.csproj", "{AFF9213D-8246-41B1-A92A-6132EB6A918C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vikekh.Citronol.Client", "src\Vikekh.Citronol.Client\Vikekh.Citronol.Client.csproj", "{AFF9213D-8246-41B1-A92A-6132EB6A918C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vikekh.Citronol.Api", "src\Vikekh.Citronol.Api\Vikekh.Citronol.Api.csproj", "{76C4742B-06B7-4F06-80CC-04063EB1FA92}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vikekh.Citronol.Api", "src\Vikekh.Citronol.Api\Vikekh.Citronol.Api.csproj", "{76C4742B-06B7-4F06-80CC-04063EB1FA92}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{D07087E8-3A33-45EC-AD34-639F36F8D1CF}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D50AB4BD-CAC8-43DD-884D-BE3D7FA688AF}"
 	ProjectSection(SolutionItems) = preProject
-		..\.editorconfig = ..\.editorconfig
-		..\.gitignore = ..\.gitignore
-		..\LICENSE = ..\LICENSE
-		..\README.md = ..\README.md
+		.editorconfig = .editorconfig
+		.gitignore = .gitignore
+		LICENSE = LICENSE
+		README.md = README.md
 	EndProjectSection
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{4B42D1E6-6036-4870-8030-63E934625DFF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +33,10 @@ Global
 		{76C4742B-06B7-4F06-80CC-04063EB1FA92}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{76C4742B-06B7-4F06-80CC-04063EB1FA92}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{76C4742B-06B7-4F06-80CC-04063EB1FA92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B42D1E6-6036-4870-8030-63E934625DFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B42D1E6-6036-4870-8030-63E934625DFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B42D1E6-6036-4870-8030-63E934625DFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B42D1E6-6036-4870-8030-63E934625DFF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
