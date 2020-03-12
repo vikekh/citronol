@@ -15,6 +15,7 @@ else
 
     protected override async Task OnInitializedAsync()
     {
-        count = await Http.GetJsonAsync<int>("Count");
+        Http.BaseAddress = new Uri("https://localhost:5000");
+        count = await Http.GetJsonAsync<int>("/count");
     }
 }

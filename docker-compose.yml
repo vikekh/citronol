@@ -1,9 +1,0 @@
-version: '3.7'
-
-services:
-  citronol-api:
-    container_name: citronol-api
-    image: vikekh/citronol-api
-    build:
-      context: .
-      dockerfile: src/Vikekh.Citronol.Api/Dockerfile
